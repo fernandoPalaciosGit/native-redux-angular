@@ -1,18 +1,18 @@
-import { Action, Reducer } from 'redux';
+import { Reducer } from 'redux';
+import { PayloadAction } from '../models/redux_interface';
 
-const getCounter = (action: Action): number => {
-    const DEFAULT_COUNTER = 1;
+const INIT_STATE = 0;
+const DEFAULT_COUNTER = 1;
+const getCounter = (action: PayloadAction): number => {
     return typeof action.payload === 'number' ? action.payload : DEFAULT_COUNTER;
 };
-
-export const simpleCounter: Reducer<number> = (state: number, action: Action) => {
+export const simpleCounterVendor: Reducer<number> = (state: number = INIT_STATE, action: PayloadAction) => {
     switch (action.type) {
         case 'INCREMENT':
-            state += getCounter(action);
-            break;
+            return state += getCounter(action);
         case 'DECREMENT':
-            state -= getCounter(action);
-            break;
+            return state -= getCounter(action);
+        default:
+            return state;
     }
-    return state;
 };

@@ -6,3 +6,6 @@ import './src/examples/example_2';
 
 console.log('------EXAMPLE 3-------');
 import './src/examples/example_3';
+
+console.log('------EXAMPLE 4-------');
+import './src/examples/example_4';
