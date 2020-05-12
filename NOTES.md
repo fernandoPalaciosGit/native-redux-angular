@@ -47,3 +47,5 @@ hago DISPATCH al Storage --> se envia una ACCION --> el REDUCER la lee y la prep
                 - ESTADO ANTIGUO
 
 cuando el reducer no encuentra ninguna logica de manipuolacion de dato de entrada (no existe el Action), siempre devuelve el mismo estado
+
+un reducer se vuelve un switch inmenso, que procesa diferenctes acciones (action.type) -> manipula el dato (en funcion del payload) -> retorna un nuevo estado (o si no encuentra una accion, retorna el antiguo)
