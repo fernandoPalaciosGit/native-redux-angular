@@ -1,0 +1,23 @@
+{
+  "name": "redux-angular",
+  "version": "1.0.0",
+  "description": "escuela it training redux",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "keywords": [
+    "redux",
+    "ngrx",
+    "angular"
+  ],
+  "author": "Fernando Palacios Landi",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
+}
