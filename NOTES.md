@@ -45,3 +45,5 @@ hago DISPATCH al Storage --> se envia una ACCION --> el REDUCER la lee y la prep
 -------> REDUCER - acciones puras <-------------
  parametros:    - ACCION
                 - ESTADO ANTIGUO
+
+cuando el reducer no encuentra ninguna logica de manipuolacion de dato de entrada (no existe el Action), siempre devuelve el mismo estado

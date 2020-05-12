@@ -1,1 +1,1 @@
-console.log('excellente')
+import './src/examples/example-1';
