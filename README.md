@@ -1,3 +1,8 @@
+#### Test examples
+```bash
+npm run start
+```
+
 #### Vainilla Store with a single reducer
 ```typescript
 interface Action {
