@@ -3,7 +3,7 @@
 npm run start
 ```
 
-#### Vainilla Store with a single reducer
+#### Vainilla Redux with a single reducer
 ```typescript
 interface Action {
     type: string,
@@ -54,4 +54,8 @@ counterStore.dispatch(INCREMENT_ACTION);
 counterStore.dispatch(INCREMENT_ACTION);
 counterStore.dispatch(INCREMENT_ACTION);
 counterStore.getState(); // this.store === 36
+```
+
+#### Redux with library
+```typescript
 ```
