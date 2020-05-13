@@ -49,3 +49,11 @@ hago DISPATCH al Storage --> se envia una ACCION --> el REDUCER la lee y la prep
 cuando el reducer no encuentra ninguna logica de manipuolacion de dato de entrada (no existe el Action), siempre devuelve el mismo estado
 
 un reducer se vuelve un switch inmenso, que procesa diferenctes acciones (action.type) -> manipula el dato (en funcion del payload) -> retorna un nuevo estado (o si no encuentra una accion, retorna el antiguo)
+
+
+UNICO STORAGE
+FLUX establece multiples estados de la aplicacion, pero el patron de REDUX se basa en  un UNICO ESTADO DE LA APLICACION centralizado en un unico storage
+
+MULTIPLES REDUCERS
+El storage provee de multiple reducers, estos acceden a manipilar el estado de la aplicacion a través de las ACTIONS
+Si la Accion que se lanza en en el storage (DISPATCH STORAGE) no esta registrada (NO ACTIVA NINGUN REDUCER), entonces el storage devuelve el ultimo estado de la aplicacion
