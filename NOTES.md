@@ -57,3 +57,6 @@ FLUX establece multiples estados de la aplicacion, pero el patron de REDUX se ba
 MULTIPLES REDUCERS
 El storage provee de multiple reducers, estos acceden a manipilar el estado de la aplicacion a través de las ACTIONS
 Si la Accion que se lanza en en el storage (DISPATCH STORAGE) no esta registrada (NO ACTIVA NINGUN REDUCER), entonces el storage devuelve el ultimo estado de la aplicacion
+
+NOS SUSCRIBIMOS A UNA PARTE DEL ESTADO DE LA APLCAICION
+cada componente esta sincronizado a una parte del Storage -> El Store es un arbol de nodos, cada nodo representa una parte del estado de la aplicacion

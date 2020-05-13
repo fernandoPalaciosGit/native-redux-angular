@@ -53,9 +53,33 @@ const INCREMENT_ACTION: Action = {
 counterStore.dispatch(INCREMENT_ACTION);
 counterStore.dispatch(INCREMENT_ACTION);
 counterStore.dispatch(INCREMENT_ACTION);
-counterStore.getState(); // this.store === 36
+console.log(counterStore.getState()); // this.store === 36
 ```
 
 #### Redux with library
 ```typescript
+import { createStore, Store, Action, Reducer } from 'redux';
+
+interface ActionPayload extends Action {
+    payload?: any;
+}
+
+const counterReducer: Reducer = (state: number, action: ActionPayload) => {
+    switch (action.type) {
+        case 'INCREMENT':
+            return state += action.payload;
+        default:
+            return state;
+    }
+};
+const INCREMENT: ActionPayload = {
+    type: 'INCREMENT',
+    payload: 12
+};
+const counterStore: Store<number> = createStore(counterReducer);
+counterStore.subscribe(() => console.log(counterStore.getState())); // this.store === 12 , 24, 36
+counterStore.dispatch(INCREMENT);
+counterStore.dispatch(INCREMENT);
+counterStore.dispatch(INCREMENT);
+
 ```
